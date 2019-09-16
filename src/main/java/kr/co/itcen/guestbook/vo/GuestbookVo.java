@@ -1,6 +1,5 @@
 package kr.co.itcen.guestbook.vo;
 
-import java.util.Date;
 
 public class GuestbookVo {
 	private Long no;

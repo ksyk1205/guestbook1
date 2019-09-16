@@ -1,13 +1,17 @@
+<%@page import="kr.co.itcen.guestbook.dao.GuestbookDao"%>
 <%@page import="kr.co.itcen.guestbook.vo.GuestbookVo"%>
 <% 
 
 	request.setCharacterEncoding("utf-8");
-	String name = request.getParameter("name");
+	String no = request.getParameter("no");
 	String password = request.getParameter("password");
-	String contents = request.getParameter("contents");
-	 
-	
-	GuestbookVo vo = new GuestbookVo();
-	
 
+		
+	GuestbookVo vo = new GuestbookVo();
+	vo.setNo(Long.parseLong(no));
+	vo.setPassword(password);
+	
+	new GuestbookDao().delete(vo);
+	
+	response.sendRedirect(request.getContextPath());
 %>

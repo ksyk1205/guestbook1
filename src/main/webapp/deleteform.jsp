@@ -8,8 +8,8 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="<%=request.getContextPath() %>/delete.jsp">
-		<input type='hidden' name="no" value="<%=request.getParameter("no") %>">
+	<form method='post' action='delete.jsp'>
+		<input type='hidden' name="no" value='<%=no %>'>
 		<table>
 			<tr>
 				<td>비밀번호</td>
